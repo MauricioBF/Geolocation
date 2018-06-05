@@ -50,7 +50,7 @@ function initMap() {
                 infowindow.open(marker.get('map'), marker);
             });
             if (aux == 0) {
-                marker_list.push({ 'lat': test, 'text': title_screen_input.value });
+                marker_list.push({ 'lat': e.latLng, 'text': title_screen_input.value });
                 localStorage.setItem('marker_local_list', JSON.stringify(marker_list));
                 aux = 1;
             }
