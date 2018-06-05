@@ -27,12 +27,14 @@ function initMap() {
         });
     }
     window.onload = function() {
-        marker_list = JSON.parse(localStorage.getItem('marker_local_list'));
-        let vetor = JSON.parse(localStorage.getItem('marker_local_list'));
-        var cont = 0;
-        while (cont<vetor.length) {
-            addMarker(vetor[cont].lat, vetor[cont].text);
-            cont+=1
+        if(localStorage['marker_local_list'] !== undefined){
+            marker_list = JSON.parse(localStorage.getItem('marker_local_list'));
+            let vetor = JSON.parse(localStorage.getItem('marker_local_list'));
+            var cont = 0;
+            while (cont<vetor.length) {
+                addMarker(vetor[cont].lat, vetor[cont].text);
+                cont+=1;
+            }
         }
     };
     google.maps.event.addListener(map, 'click', function (e) {
