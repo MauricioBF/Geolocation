@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="manifest" href="https://lucasdefelippe.github.io/teste/manifest.json">
+        <link rel="stylesheet" href="css/google-maps-style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div id="map"></div>
+        <div class="div-marker-title">
+            <input type="text" placeholder="Adicione um titulo">
+            <button id="marker-title-end">Concluir</button>
+            <button id="marker-title-cancel">Cancelar</button>
+        </div>
+        <script src="js/google-maps-script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKiQZhvmLa9xJpgFpohnm9OkBLrPZ3uxY&callback=initMap"></script>
+        <script>
+            if (navigator.serviceWorker.controller) {
+                console.log('[PWA Builder] active service worker found, no need to register')
+            } else {
+                navigator.serviceWorker.register('sw.js', {
+                    scope: './'
+                }).then(function (reg) {
+                    console.log('Service worker has been registered for scope:' + reg.scope);
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+#map {
+    height: 100%;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.div-marker-title{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 1000ms;
+}
+.div-marker-title input{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+    overflow: hidden;
+}
+.div-marker-title input:focus{
+    outline: none !important;
+    border: 0px solid rgb(255, 255, 255);
+}
+.div-marker-title button{
+    position: relative;
+    top: calc(50% + 20px);
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+#marker-title-end {
+    transform: translate(-150%);
+}
+#marker-title-cancel{
+    transform: translate(-140%);
+}
