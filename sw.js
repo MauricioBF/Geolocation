@@ -4,7 +4,7 @@ self.addEventListener('install', function (event) {
         fetch(indexPage).then(function (response) {
             caches.open('pwabuilder-offline').then(function (cache) {
                 console.log('[PWA Builder] Cached index page during Install' + response.url);
-                return cache.addAll(['/Geolocation/', '/Geolocation/index.html', '/Geolocation/css/google-maps-style.css', '/Geolocation/js/google-maps-script.js', 'Geolocation/images/location-icon.js'
+                return cache.addAll(['/geolocation/', '/geolocation/index.html', '/geolocation/css/google-maps-style.css', '/geolocation/js/google-maps-script.js', 'geolocation/images/location-icon.js'
                 ]);
             });
         })
